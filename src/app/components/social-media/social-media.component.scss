@@ -1,0 +1,40 @@
+@import "../../../assets/css/media-querys";
+@import "../../../assets/css/variables";
+#social-media{
+  .social-media-container{
+    .header{
+      .header-text{
+        .word{
+          transition: transform 1s cubic-bezier(0.45, -0.01, 0, 0.88), opacity 1s;
+
+          color: $social-title-color;
+          transform: translateY(4rem);
+        }
+      }
+      .header-text.ready{
+        .word{
+          transform: translateY(0);
+        }
+      }
+    }
+    .social-media-icon-container{
+      .mediator{
+        column-gap: 8.63rem;
+        .social-icon{
+         opacity: 0;
+          transition: opacity .5s ease-in;
+          svg{
+            color: $social-icon-color;
+            transition: opacity .2s ease-in;
+          }
+          svg:hover{
+            opacity: .8;
+          }
+        }
+        .social-icon.ready{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../../../../assets/css/variables";
+#full-navbar{
+  overflow-x: hidden !important;
+  height: 0;
+  transition: height .75s cubic-bezier(.8,0,0,.8);
+  margin-top: 4.5rem;
+  z-index: 100000;
+  .side{
+    transition: transform .5s ease-in,opacity .2s ease-in;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .hide{
+    transform: translateX(-100vw) !important;
+    opacity: 0 !important;
+  }
+  .hide-item{
+    transform: translateX(100vw) !important;
+    opacity: 0 !important;
+  }
+  .art-culture, .sustainability, .innovation, .exclusive{
+    overflow: scroll;
+    max-height: calc(100vh - 3.625rem - 4.5rem);
+    .navigation{
+      padding-top: 0 !important;
+      margin-top: .8rem;
+      .navigation-item{
+        padding: 0.8rem 0.87rem .7rem !important;
+      }
+    }
+  }
+  .navigation-container{
+    .navigation{
+      padding-top: 5.5rem;
+      padding-bottom: 5.95rem;
+      flex-direction: column;
+      .navigation-item{
+        padding: .87rem;
+        .text{
+          color: $full-screen-text-color;
+          font-size: .95rem;
+        }
+        .text:hover{
+          color: $full-screen-text-color !important;
+        }
+      }
+    }
+  }
+
+}
+.overflow-hidden-im{
+  overflow: hidden !important;
+}
+.overflow-hidden-all{
+  overflow: hidden !important;
+}

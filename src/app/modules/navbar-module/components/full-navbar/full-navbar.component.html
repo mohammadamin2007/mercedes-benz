@@ -1,0 +1,69 @@
+<section id="full-navbar" class="position-fixed top-0 w-100 overflow-scroll" [ngClass]="{'overflow-hidden-all': vlService.fullscreenSideStatus != 'main', 'overflow-hidden-im': vlService.modalOpened,'h-100': vlService.menuH,'d-none': !vlService.menuDisplay, 'd-block': vlService.menuDisplay}">
+  <div class="main-full-nav side" [ngClass]="{'hide': vlService.fullscreenSideStatus != 'main'}" >
+    <div class="navigation-container">
+      <ul class="navigation d-flex w-100 align-items-center">
+        <li *ngFor="let item of navItemList" class="navigation-item">
+          <a class="curs-pointer text" (click)="vlService.openItem(item.text.toLowerCase().slice(0, 3))">{{ item.text }}</a>
+        </li>
+      </ul>
+    </div>
+    <app-full-navbar-footer></app-full-navbar-footer>
+  </div>
+  <div class="side position-absolute top-0 w-100" [ngClass]="{'hide-item': vlService.fullscreenSideStatus != 'art'}">
+    <app-top-sides-navigation [titleName]="'Art & Culture'"></app-top-sides-navigation>
+    <div class="art-culture">
+      <div class="navigation-container">
+        <ul class="navigation d-flex w-100 align-items-center">
+          <li *ngFor="let item of artAndCulture" class="navigation-item">
+            <a class="curs-pointer text">{{ item.text }}</a>
+          </li>
+        </ul>
+      </div>
+      <app-full-navbar-footer></app-full-navbar-footer>
+    </div>
+  </div>
+  <div class="side position-absolute top-0 w-100" [ngClass]="{'hide-item': vlService.fullscreenSideStatus != 'sus'}">
+    <app-top-sides-navigation [titleName]="'Sustainability'"></app-top-sides-navigation>
+    <div class="sustainability">
+      <div class="navigation-container">
+        <ul class="navigation d-flex w-100 align-items-center">
+          <li *ngFor="let item of susItemList" class="navigation-item">
+            <a class="curs-pointer text">{{ item.text }}</a>
+          </li>
+        </ul>
+      </div>
+      <app-full-navbar-footer></app-full-navbar-footer>
+    </div>
+
+  </div>
+  <div class="side position-absolute top-0 w-100 overflow-hidden" [ngClass]="{'hide-item': vlService.fullscreenSideStatus != 'inn'}">
+    <app-top-sides-navigation [titleName]="'Innovation'"></app-top-sides-navigation>
+    <div class="overflow-hidden">
+      <div class="innovation">
+        <div class="navigation-container">
+          <ul class="navigation d-flex w-100 align-items-center">
+            <li *ngFor="let item of innItemList" class="navigation-item">
+              <a class="curs-pointer text">{{ item.text }}</a>
+            </li>
+          </ul>
+        </div>
+        <app-full-navbar-footer></app-full-navbar-footer>
+      </div>
+    </div>
+  </div>
+  <div class="side position-absolute top-0 w-100 overflow-hidden" [ngClass]="{'hide-item': vlService.fullscreenSideStatus != 'exc'}">
+    <app-top-sides-navigation [titleName]="'Exclusive'"></app-top-sides-navigation>
+    <div class="overflow-hidden">
+      <div class="exclusive">
+        <div class="navigation-container">
+          <ul class="navigation d-flex w-100 align-items-center">
+            <li *ngFor="let item of exItemList" class="navigation-item">
+              <a class="curs-pointer text">{{ item.text }}</a>
+            </li>
+          </ul>
+        </div>
+        <app-full-navbar-footer></app-full-navbar-footer>
+      </div>
+    </div>
+  </div>
+</section>

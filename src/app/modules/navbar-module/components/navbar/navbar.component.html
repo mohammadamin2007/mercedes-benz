@@ -1,0 +1,264 @@
+<section id="navbar" class="navbar navbar-dark p-0 bg-black position-fixed flex-column fixed-top w-100 small" [ngClass]="{'navbar-content-load': navbarContent,'navbar-load': navbarLoad,'scroll-down': scrollService.navbarStatus, 'open-search': vlService.searchOpened, 'open-menu': vlService.menuOpen, 'scroll-up': !scrollService.navbarStatus}">
+  <div class="position-relative w-100">
+    <div class="position-absolute w-100">
+      <div class="top-navigation w-100">
+        <ul class="navigation-list d-flex">
+          <li class="d-flex align-items-center language-switcher">
+            <div class="language deutsch">
+              <a class="text-decoration-none d-flex align-items-center" href="#">Deutsch</a>
+            </div>
+            <div class="divider align-self-center"></div>
+            <div class="language english">
+              <a class="current-lang text-decoration-none d-flex align-items-center" href="#">English</a>
+            </div>
+          </li>
+          <li class="d-flex align-items-center pr-pr me-auto">
+            <ng-template #proPri let-modal>
+              <div class="modal-header">
+                <a class="curs-pointer close-btn position-absolute" (click)="dismiss(proPri)">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.001 14.898" width="0.9285714285714286rem" height="0.9285714285714286rem" class="brandhub-icon"><path d="M14.949 13.326l-1.546 1.572L7.5 9.33l-5.876 5.568-1.572-1.572 5.593-5.851L0 1.598 1.572 0 7.5 5.619 13.429 0l1.572 1.598-5.645 5.877z" fill="currentColor"></path></svg>
+                </a>
+              </div>
+              <div class="modal-body">
+                <div class="navigation-bar">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item" *ngFor="let title of paginationTitleList; let i = index"><a class="tab-link d-block curs-pointer" [ngClass]="{'active': pageName == title.text}" (click)="active(title.text)">{{ title.text }}</a></li>
+                  </ul>
+                </div>
+                <div class="pages-container" [ngSwitch]="pageName">
+                  <div *ngSwitchCase="'Provider'">
+                    <p class="title">Mercedes-Benz AG</p>
+                    <p>
+                      Mercedesstraße 120<br>
+                      D-70372 Stuttgart<br>
+                      Germany<br>
+                    </p>
+                    <p>
+                      Phone: +49 7 11 17-0<br>
+                      E-Mail: <a href="#">dialog@mercedes-benz.com</a>
+                    </p>
+                    <p>Represented by the Board of Management:</p>
+                    <p>Ola Källenius (Chairman), Jörg Burzer, Renata Jungo Brüngger, Sabine Kohleisen, Harald Wilhelm, Markus Schäfer, Britta Seeger, Hubertus Troska</p>
+                    <p>Chairman of the Supervisory Board: Bernd Pischetsrieder</p>
+                    <p>Court of Registry: Stuttgart; commercial register no. 76 2873</p>
+                    <p>VAT ID: DE321281763</p>
+                    <p>&nbsp;</p>
+                    <p><b>Other companies advertising on this website:</b></p>
+                    <p>&nbsp;</p>
+                    <p class="title">Provider of Mercedes-Benz Group contents</p>
+                    <p>Mercedes-Benz Group AG</p>
+                    <p>
+                      Mercedesstraße 120 <br>
+                      D-70372 Stuttgart<br>
+                      Germany<br>
+                    </p>
+                    <p>Phone: +49 7 11 17-0<br>
+                      E-Mail: <a href="#">dialog@mercedes-benz.com</a>
+                    </p>
+                    <p>Represented by the Board of Management:</p>
+                    <p>Ola Källenius (Chairman), Jörg Burzer, Renata Jungo Brüngger, Sabine Kohleisen, Harald Wilhelm, Markus Schäfer, Britta Seeger, Hubertus Troska</p>
+                    <p>Chairman of the Supervisory Board: Bernd Pischetsrieder</p>
+                    <p>Court of Registry: Stuttgart; commercial register no. 19 360</p>
+                    <p>VAT ID: DE 223101663<br>&nbsp;</p>
+                    <p class="title">
+                      Provider of Mercedes-Benz Museum contents
+                    </p>
+                    <p>Mercedes-Benz Museum GmbH<br>
+                      Ein Unternehmen der Mercedes-Benz Group AG
+                    </p>
+                    <p>
+                      Mercedesstraße 100<br>
+                      D-70372 Stuttgart<br>
+                      Germany<br>
+                    </p>
+                    <p>
+                      Phone: +49(0)711-17 30 000<br>
+                      Fax: +49(0)711-17 30 400<br>
+                      E-Mail: <a href="#">classic@mercedes-benz.com</a>
+                    </p>
+                    <p>Managing Directors: Marcus Breitschwerdt (Chairman), Bettina Haussmann, Andreas Theel</p>
+                    <p>Court of Registry: Stuttgart; commercial register no. 23 165</p>
+                    <p>VAT ID: DE 223101663<br>&nbsp;</p>
+                    <p class="title">Provider of Mercedes-Benz Energy contents</p>
+                    <p>Mercedes-Benz Energy GmbH<br>
+                      Ein Unternehmen der Mercedes-Benz AG
+                    </p>
+                    <p>Prof.-Gottfried-Bombach-Straße 1<br>
+                      D-01917 Kamenz<br>
+                      Germany
+                    </p>
+                    <p>
+                      E-Mail: <a href="#">energy-info@mercedes-benz.com</a>
+                    </p>
+                    <p>Managing Directors: Gordon Gassmann, Loreen Kramer</p>
+                    <p>Court of Registry: Dresden; commercial register no. 35 530</p>
+                    <p>VAT ID: DE 299767583</p>
+                  </div>
+                  <div *ngSwitchCase="'Legal Notice'">
+                    <p class="title">Copyrights</p>
+                    <p>Copyright 2003-2020 Mercedes-Benz AG. All rights reserved. All text, images, graphics, sound files, video files and animation files and their arrangement are subject to copyright and other intellectual property laws. They may not be copied, either for commercial purposes or for redistribution, nor may they be modified and used on other websites. Some Mercedes-Benz Group AG webpages also include material that is subject to the copyright of those parties who have made such material available.</p>
+                    <p class="title">Products and prices</p>
+                    <p>Some products and services may have changed since individual pages on this website were last edited. The manufacturer reserves the right to make changes to the design, form, color and specification during the delivery period, provided these changes or variations can be deemed reasonable for the customer, while taking into account the interests of Mercedes-Benz Group AG. The illustrations may show accessories, optional equipment or other features which are not part of the standard specification. Colors may differ slightly from those depicted, for technical reasons. Some pages may also feature models and services which are not available in individual countries. Statements regarding legislative, fiscal or other legal regulations and the implications of these are valid only for the Federal Republic of Germany. Subject to any contrary provision in the terms and conditions of sale or delivery, the prices valid on the date of delivery shall apply. For our dealers, the prices are to be regarded as the recommended retail price. Please contact a company-owned sales and service outlet or an authorized dealer to find out current prices.</p>
+                    <p class="title">Trademarks</p>
+                    <p>Unless otherwise stipulated, all brand names featured on the pages of Mercedes-Benz Group AG websites are legally protected trademarks belonging to Mercedes-Benz Group AG. This applies in particular to the model names and all corporate logos and emblems.</p>
+                    <p class="title">Licenses</p>
+                    <p>Mercedes-Benz Group AG has sought to bring you an innovative and informative internet site, and we hope that you will be as enthusiastic about our creative effort as we are. Please appreciate, however, that Mercedes-Benz Group AG has to protect its intellectual property, including patents, trademarks and copyrights, and that these internet pages cannot be construed as granting any license rights to Mercedes-Benz Group AG’s intellectual property.</p>
+                    <p class="title">Forward-looking statements disclaimer</p>
+                    <p>Internet pages, Investor Relations releases, annual and interim reports, outlooks, presentations, audio and video broadcasts of events (live or recorded) and other documents on this website contain, among other things, forward-looking statements about future developments that are based on the current assessments of the management. The words ‘anticipate,’ ‘assume,’ ‘believe,’ ‘estimate,’ ‘expect,’ ‘intend,’ ‘may/might,’ ‘plan,’ ‘project,’ ‘should’ and similar expressions are used to indicate forward-looking statements. Such statements are subject to certain risks and uncertainties, including an economic downturn in Europe or North America, changes in exchange rates, interest rates and raw materials prices, the launch of products by competitors, higher sales incentives, the successful implementation of the new business model for smart, and a decline in resale prices of used vehicles. If any of these risks and uncertainties (some of which are described in Mercedes-Benz Group AG’s most recent Annual Report under the heading ‘Risk Report’ and under the heading ‘Risk Factors’ in Form 20-F, which was submitted to the US Securities and Exchange Commission (SEC)) materialize or if the assumptions underlying any of our forward-looking statements prove incorrect, then our actual results may be materially different from those we express or imply by such statements. We do not intend or assume any obligation to update these forward-looking statements. Any forward-looking statement applies only in relation to the situation prevailing on the date on which it is made.</p>
+                    <p class="title">Information according to § 36 German Consumer Dispute Resolution Act (VSBG)</p>
+                    <p>Mercedes-Benz Group AG will not participate in a dispute settlement proceeding in front of a consumer arbitration board according to the German Consumer Dispute Resolution Act (VSBG) and is not obliged to do so.</p>
+                    <p class="title">Information about online dispute resolution</p>
+                    <p>The European Commission has established an internet platform for online dispute resolution (so called “ODR platform”). The ODR platform is a point of entry for out-of-court resolutions relating to contractual obligations of online sales contracts. You can get to the ODR platform by following the link: <a href="http://ec.europa.eu/consumers/odr">http://ec.europa.eu/consumers/odr</a></p>
+                    <p class="title">Liability</p>
+                    <p>The information provided and the statements made on these pages do not constitute any representation or warranty, either express or implied. In particular such information is not an implied promise or guarantee in respect of quality, marketability, fitness for any particular purpose, or the non-infringement of laws and patents. Our internet pages also contain links to other internet sites. We would like to point out that we have no influence over the design and content of the linked sites. We therefore accept no liability for the accuracy, completeness or quality of the information provided there, nor do we guarantee that it is up to date. Consequently we hereby distance ourselves from all content of such sites. This declaration applies to all links to external sites contained on our internet pages and to the content of such sites.</p>
+                  </div>
+                  <div *ngSwitchCase="'Cookies'"></div>
+                  <div *ngSwitchCase="'Privacy Statement'">
+                    <p>This is the International website of Mercedes-Benz AG.<br>
+                      Visitors from the U.S., please visit our U.S. website <a href="#">www.mbusa.com</a>.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="title">The party responsible within the meaning of the General Data Protection Regulation (GDPR) is:</p>
+                    <p>Mercedes-Benz AG (“We”)</p>
+                    <p>Mercedesstrasse 120<br>
+                      D-70372 Stuttgart<br>
+                      Germany
+                    </p>
+                    <p>Email: <a href="#">dialog@mercedes-benz.com</a></p>
+                    <p>&nbsp;</p>
+                    <p class="title">Data protection officer:</p>
+                    <p>Mercedes-Benz Group AG<br>
+                      Chief Officer Corporate Data Protection<br>
+                      HPC E600<br>
+                      D-70546 Stuttgart<br>
+                      Germany<br>
+                      Email: <a href="#">data.protection@mercedes-benz.com</a>
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'1. Data protection'| paddingRightText}}</p>
+                    <p>We appreciate you visiting our website and your interest in the products we offer. Protecting your personal data is very important to us. In this Privacy Policy, we explain how we collect your personal information, what we do with it, for what purposes and on what legal foundation we do so, and what rights you have on that basis. We will also refer you to our <a href="#">Data Protection Policy (PDF).</a></p>
+                    <p>Our Privacy Statement on the use of our websites and our Data Protection Policy do not apply to your activities on the websites of social networks or other providers that can be accessed using the links on our websites. Please read the data protection provisions on the websites of those providers.</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'2. Collection and processing of your personal data' | paddingRightText}}</p>
+                    <p>{{'a.         Whenever you visit our websites, we store certain information about the browser and operating system you are using; the date and time of your visit; the status of the interaction (e.g. whether you were able to access the website or received an error message); the usage of features on the website; any search phrases you entered; how often you visit individual websites; the names of the files you access; the amount of data transferred; the Web page from which you accessed our website; and the Web page you visited after visiting our website, whether by clicking links on our websites or entering a domain directly into the input field of the same tab (or window) of the browser in which you have our websites open. In addition, we store your IP address and the name of your Internet service provider for seven days. This is for security reasons; in particular, to prevent and detect attacks on our websites or attempts at fraud.'|paddingRightText}}</p>
+                    <p>{{'b.         We only store other personal data if you provide this data, e.g. as part of a registration, contact form, chat, survey, price competition or for the execution of a contract, and even in these cases only insofar as this is permitted to us on the basis of a consent given by you or in accordance with the applicable legal provisions (see section 7'|paddingRightText}}</p>
+                    <p>{{'c.         You are neither legally nor contractually obligated to share your personal information. However, certain features of our websites may depend on the sharing or personal information. If you do not provide your personal information in such cases, you may not be able to use those features, or they may be available with limited functionality.'|paddingRightText}}</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'3. Purposes of use' | paddingRightText}}</p>
+                    <p>{{'a.         We use the personal information collected during your visit to any of our websites to make using them as convenient as possible for you and to protect our IT systems against attacks and other unlawful activities.' | paddingRightText}}</p>
+                    <p>{{'b.         If you share additional information with us – for example, by filling out a registration form, contact form, chat, survey, contest entry or to execute a contract with you – we will use that information for the designated purposes, purposes of customer management and – if required – for purposes of processing and billing and business transactions within the required scope in each instance.'| paddingRightText}}</p>
+                    <p>{{'c.         For other purposes (e.g. display of personalized content or advertising based on your usage behaviour), we and, if applicable, selected third parties, use your personal data if and to the extent you give your consent through our consent management system.' | paddingRightText}}</p>
+                    <p>d. In addition, we use personal data to the extent that we are legally obliged to do so (e.g., storage for the fulfilment of commercial or tax-related retention obligations, release in accordance with official or judicial orders, e.g. to a law enforcement authority).</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'4.        Transfer of personal data to third parties; social plug-ins; use of service providers' | paddingRightText}}</p>
+                    <p>{{'a.         Our websites may also contain an offer of third parties. If you click on such an offer, we transfer data to the respective provider to the required extent (e.g. information that you have found this offer with us and, if applicable, further information that you have already provided on our websites for this purpose).'| paddingRightText}}</p>
+                    <p>When you visit our websites, the social plug-ins are deactivated, i.e. no data is transmitted to the operators of these networks. If you want to use one of the networks, click on the respective social plug-in to establish a direct connection to the server of the respective network.</p>
+                    <p>If you have a user account on the network and are logged in when you activate the social plug-in, the network can associate your visit to our websites with your user account. If you want to avoid this, please log out of the network before activating the social plug-in. A social network cannot associate a visit to other Mercedes-Benz Group websites until you have activated an existing social plug-in.</p>
+                    <p>When you activate a social plug-in, the network transfers the content that becomes available directly to your browser, which integrates it into our websites. In this situation, data transmissions can also take place that are initiated and controlled by the respective social network. Your connection to a social network, the data transfers taking place between the network and your system, and your interactions on that platform are governed solely by the privacy policies of that network.</p>
+                    <p>The social plug-in remains active until you deactivate it or delete your cookies (see section 5.d).</p>
+                    <p>{{'c.         If you click on the link to an offer or activate a social plug-in, personal data may reach providers in countries outside the European Economic Area that, from the point of view of the European Union ("EU"), may not guarantee an "adequate level of protection" for the processing of personal data in accordance with EU standards. Please remember this fact before clicking on a link or activating a social plug-in and thereby triggering a transfer of your data.'| paddingRightText}}</p>
+                    <p>{{'d.         We also use qualified service providers (e.g., IT service providers, marketing agencies ) to operate, optimize and secure our websites. We only pass on personal data to the latter insofar as this is necessary for the provision and use of the website and its functionalities, for the pursuit of legitimate interests, to comply with legal obligations, or insofar as you have consented there to (see section 7). You will find more information regarding recipients of personal data in our consent management system.' | paddingRightText}}</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'5.        Cookies'|paddingRightText}}</p>
+                    <p>{{'a.         Cookies may be used when you are visiting our websites. Technically, these are so-called HTML cookies and similar software tools such as Web/DOM Storage or Local Shared Objects (so-called "Flash cookies"), which we collectively refer to as cookies.' | paddingRightText}}</p>
+                    <p>{{'b.         Cookies are small files that are stored on your desktop, notebook or mobile device while you visit a website. Cookies make it possible, for example, to determine whether there has already been a connection between the device and the websites; take into account your preferred language or other settings, offer you certain certain functions (e.g. online shop, vehicle configurator) or recognize your usage-based interests. Cookies may also contain personal data.' | paddingRightText}}</p>
+                    <p>{{'c.         Whether and which cookies are used when you visit our websites depends on which areas and functions of our websites you use and whether you agree to the use of cookies that are not technically required in our Consent Management System.' | paddingRightText}}</p>
+                    <p>{{'d.         The use of cookies also depends on the settings of the web browser you are using (e.g., Microsoft Edge, Google Chrome, Apple Safari, Mozilla Firefox). Most web browsers are preset to automatically accept certain types of cookies; however, you can usually change this setting. You can delete stored cookies at any time. Web/DOM storage and local shared objects can be deleted separately. You can find out how this works in the browser or device you are using in the manual of the learner.' | paddingRightText}}</p>
+                    <p>{{'e.         The consent to, and rejection or deletion of, cookies are tied to the device and also to the respective web browser you use. If you use multiple devices or web browsers, you can make decisions or settings differently.' | paddingRightText}}</p>
+                    <p>{{'f.         If you decide against the use of cookies or delete them, you may not have access to all functions of our websites or individual functions may be limited.' | paddingRightText}}</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{ '6.        Security' | paddingRightText }}</p>
+                    <p>We take technical and organizational security measures in order to protect your information managed by us from being tampered with, lost, destroyed or accessed by unauthorized individuals. We are continuously improving our security measures in line with technological advancements.</p>
+                    <p class="title">{{ '7.        Legal Foundations for Processing' | paddingRightText }}</p>
+                    <p>{{ 'a.         If you have given us your consent to process your personal information, then that is the legal foundation for processing it (Art. 6, para. 1, letter a, of the EU\'s General Data Protection Regulation, or GDPR).' | paddingRightText }}</p>
+                    <p>{{ 'b.         Art. 6, para. 1, letter b, of the GDPR is the legal basis for processing personal information for the purpose of entering into a contract or performing a contract with you.' | paddingRightText }}</p>
+                    <p>{{ 'c.         If processing your personal information is required to fulfill our legal obligations (e.g. data retention), we are authorized to do so by Art. 6, para. 1, letter c, of the GDPR.' | paddingRightText }}</p>
+                    <p>{{ 'd.         Furthermore, we process personal information for purposes of protecting our legitimate interests as well as the interests of third parties in accordance with Art. 6, para. 1, letter f of the GDPR. Examples of such legitimate interests include maintaining the functionality of our IT systems as well as the (direct) marketing of our products and services (to the extent not covered by your consent) and those of third parties and the legally required documentation of business contacts. As part of the consideration of interests required in each case, we take into account various aspects, in particular the type of personal information, the purpose of processing, the circumstances of processing and your interest in the confidentiality of your personal information.' | paddingRightText }}</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{ '8.         Deleting your personal data' | paddingRightText}}</p>
+                    <p>Your IP address and the name of your Internet service provider, which we store for security reasons, are deleted after seven days. Moreover, we delete your personal information as soon as the purpose for which it was collected and processed has been fulfilled. Beyond this time period, data storage only takes place to the extent made necessary by the legislation, regulations or other legal provisions to which we are subject in the EU or by legal provisions in third-party countries if these have an appropriate level of data protection. Should it not be possible to delete data in individual cases, the relevant personal data are flagged to restrict their further processing.</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{ '9.         Rights of the Data Subject' | paddingRightText}}</p>
+                    <p>{{ 'a.         As a data subject, you have the right of access (Art. 15 GDPR), right to rectification (Art. 16 GDPR), right to erasure (Art. 17 GDPR), right to restriction of processing (Art. 18 GDPR) and right to data portability (Art. 20 GDPR).' | paddingRightText }}</p>
+                    <p>{{ 'b.         If you have consented to the processing of your personal data by us, you have the right to revoke your consent at any time. The legality of processing your personal data before revocation remains unaffected. We may further process such data pursuant to another applicable legal basis, e.g. for the fulfilment of our legal obligations (cf. section "Legal bases of processing").' | paddingRightText }}</p>
+                    <p>c.<span>{{ ''| paddingRightText }}</span><span class="text-decoration-underline">Right to object</span><br><span class="text-decoration-underline">For reasons relating to your particular situation, you have the right to file an objection at any time to the processing of personal data pertaining to you that is collected under Section 6 Clause (1e) GDPR (data processing in the public interest) or Section 6 Clause 1 f) GDPR (data processing on the basis of a balance of interests). If you file an objection, we will continue to process your personal data only if we can document mandatory, legitimate reasons that outweigh your interests, rights and freedoms, or if processing is for the assertion, exercise or defense of legal claims. To the extent we use your personal data for direct marketing based on legitimate interests, you have the right to object at any time without giving reasons.</span></p>
+                    <p>{{ 'd.         We ask you to address your claims or declarations to the following contact address if possible:' | paddingRightText }}&nbsp;<a href="#">dialog@mercedes-benz.com</a></p>
+                    <p>{{ 'e.         If you believe that the processing of your personal data violates legal requirements, you have the right to lodge a complaint with a competent data protection supervisory authority (Art. 77 GDPR).' | paddingRightText }}</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'10.      Newsletter'| paddingRightText}}</p>
+                    <p>If you subscribe to a newsletter offered on our website, the information provided during registration for the newsletter will be used solely for the purpose of mailing the newsletter unless you consent to its use for additional purposes. You may cancel the subscription at any time by using the option to unsubscribe contained in the newsletter.</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'11.      Mercedes-Benz Group AG\'s Central Registration Service' | paddingRightText}}</p>
+                    <p>With the Central Registration Service offered by Mercedes-Benz Group AG, you can sign up for every website and application belonging to the Mercedes-Benz Group and its brands that are connected to the service. The applicable terms of use contain specific data protection provisions. Those terms of use can be found on the registration pages of affiliated websites and applications.</p>
+                    <p>&nbsp;</p>
+                    <p class="title">{{'12.      Data transmission to recipients outside the European Economic Area' | paddingRightText}}</p>
+                    <p>{{ 'a.         When using service providers (see section 4. d.) and passing on data to third parties based on you consent (see section 3.c.), personal data may be provided to recipients in countries outside the European Union ("EU"), Iceland, Liechtenstein and Norway (= European Economic Area) are transferred and processed there, in particular USA, India.' | paddingRightText}}</p>
+                    <p>{{ 'b.         In the following countries, from the EU\'s point of view, there is an adequate level of personal data protection (so-called "adequacy"), in compliance with EU standards: Andorra, Argentina, Canada (limited), Faroe Islands, Guernsey, Israel, Isle of Man, Japan, Jersey, New Zealand, Switzerland, Uruguay. We agree with recipients in other countries on the use of EU standard contractual clauses, binding corporate rules or other applicable instruments (if any) to create an "adequate level of protection" according to legal requirements. For more information, please use the contact details given in section 9.d. above.' | paddingRightText}}</p>
+                    <p>&nbsp;</p>
+                    <p>Last update: February 2022</p>
+                    <p>&nbsp;</p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <a class="curs-pointer text-decoration-none px-[0.2857142857rem] pt-[1px]"  (click)="modalService.open(proPri)"> Provider/Privacy </a>
+          </li>
+          <li class="d-flex align-items-center search">
+            <a class="curs-pointer nav-btn text-decoration-none d-flex px-[0.2857142857rem] pt-[1px]" (click)="vlService.openSearch()">
+              <span class="text">Search</span>
+              <span class="icon">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="w-[1.1rem_!important]"><g transform="translate(2 2)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" cx="7.121" cy="4.5" r="4.5"></circle><path fill="currentColor" d="M0 10.914L3.535 7.38l.707.707-3.535 3.536z"></path></g></svg>
+              </span>
+            </a>
+          </li>
+          <li class="d-flex align-items-center login position-static" #dropdownContainer="ngbDropdown" ngbDropdown >
+            <a class="curs-pointer nav-btn text-decoration-none d-flex px-[0.2857142857rem] pt-[1px] ng-no-navigation" ngbDropdownToggle>
+              <span class="text pr-[0.25rem]">Login</span>
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" [ngClass]="{'rotate': dropdownContainer.isOpen()}" viewBox="0 0 24 24"><path d="M9.121 19.728l-.707-.707 7.07-7.071-7.07-7.071.707-.707 7.07 7.07h.001l.707.708-7.778 7.778z" fill="currentColor" fill-rule="evenodd"></path></svg>
+              </span>
+            </a>
+            <div class="dropdown-container bg-white p-0 m-0" ngbDropdownMenu>
+              <div class="dropdown-link-container" *ngFor="let dropItem of dropItemList; let i = index">
+                <a href="#" class="dropdown-link d-flex justify-content-between align-items-center">
+                  <div class="dropdown-icon position-absolute" *ngIf="i == 0"></div>
+                  <span class="text">{{ dropItem.text }}</span>
+                  <span class="link-icon d-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="100%" height="100%"><path d="M4 11.036L10.034 5 5.743 5V4h6v6h-1l-.001-4.291-6.035 6.034L4 11.036z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="position-absolute w-100">
+      <div class="top-navigation sec w-100">
+        <ul class="navigation-list d-flex justify-content-between">
+          <li class="d-flex align-items-center pr-pr position-relative">
+            <a class="curs-pointer search-btn text-decoration-none px-[0.2857142857rem] pt-[1px]" (click)="vlService.openSearch()"> Search </a>
+            <a class="curs-pointer search-btn-close text-decoration-none px-[0.2857142857rem] pt-[1px] position-absolute" (click)="vlService.closeSearch()"> Close Search </a>
+          </li>
+          <li class="d-flex align-items-center search position-relative">
+            <a class="curs-pointer nav-btn text-decoration-none d-flex px-[0.2857142857rem] pt-[1px]" (click)="vlService.openMenu()">
+              <span class="text">Menu</span>
+            </a>
+            <a class="curs-pointer nav-btn-close text-decoration-none d-flex px-[0.2857142857rem] pt-[1px] position-absolute" (click)="vlService.closeMenu()">
+              <span class="text">Close</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a href="#" class="navbar-brand-video d-flex justify-content-center position-relative">
+        <img class="brand-pic" src="https://www.mercedes-benz.com/content/dam/brandhub/global/logos/MB-star_n_web.svg" alt="MB-star">
+    </a>
+    <div class="justify-content-center navbar-nav-container w-100 position-absolute">
+      <div class="position-relative d-flex w-100 justify-content-center">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item" (mouseenter)="hovered('enter' ,i)" (mouseleave)="hovered('leave' ,i)" *ngFor="let navItem of navbarNavList; let i = index"><a href="#" [ngClass]="{'normal': navItem.white}" class="nav-link">{{ navItem.text | titlecase }}</a></li>
+        </ul>
+        <div class="position-absolute blur-background w-100 h-100 top-0"></div>
+      </div>
+    </div>
+  </div>
+</section>

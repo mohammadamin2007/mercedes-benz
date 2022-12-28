@@ -1,0 +1,32 @@
+<section id="scrolling-footer" class="d-flex w-100 position-relative">
+  <div class="scroll-position-finder position-absolute top-0 left-0 bottom-0 right-0 h-100 w-100">
+    <div class="sec-one vh-100 position-relative" appScrollPos>
+      <div class="position-absolute" #scrollPos></div>
+    </div>
+    <div class="sec-tow vh-100 position-relative" appScrollPos>
+      <div class="position-absolute" #scrollPos></div>
+
+    </div>
+    <div class="sec-three vh-100 position-relative" appScrollPos>
+      <div class="position-absolute" #scrollPos></div>
+    </div>
+  </div>
+  <div class="scroll-container-bg position-sticky top-0 vh-100 w-100 d-flex">
+    <div class="menu-container d-flex h-50 position-absolute w-100">
+      <div class="title-container">
+        <a class="menu-item-titles d-flex" *ngFor="let navItem of navItemList; let i = index;" (click)="footerScroll(i)">
+          <div class="menu-item-title back" appAnimation>
+            <div class="title overflow-hidden">
+              <div class="words" [ngClass]="{'active': i == scroll.activeList.item}">{{ navItem.text }}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="menu-list-container position-relative">
+        <ul  *ngFor="let menu of menuList; let i = index" [ngClass]="{'z-in-1000': i === scroll.activeList.itemShow, 'show': i == scroll.activeList.itemShow,'hide': i != scroll.activeList.itemShow,'hide-up': i != scroll.activeList.item && scroll.activeList.type == 'down', 'hide-bottom': i != scroll.activeList.item && scroll.activeList.type == 'up'}" [id]="i" class="nav-menu position-absolute">
+          <li class="nav-item" *ngFor="let item of menu.list"><a href="#" class="nav-link">{{ item.text }}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

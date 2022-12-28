@@ -1,0 +1,60 @@
+@import "../../../../../assets/css/media-querys";
+@import "../../../../../assets/css/variables";
+#footer-more{
+  background-color: $footer-more-background;
+  .footer-more-container{
+    .section-divider{
+      border-bottom: 1px solid $spacer-color;
+    }
+    .footer-more-content{
+      column-gap: 2.7rem;
+      .more-title{
+        .title{
+          .words{
+            transition: transform 1s cubic-bezier(0.45, -0.01, 0, 0.88);
+            color: $footer-more-MORE-color;
+            transform: translateY(4rem);
+          }
+        }
+      }
+      .more-title.ready{
+        .title{
+          .words{
+            transform: translateY(0);
+          }
+        }
+      }
+      .more-columns{
+        transition: transform 1s cubic-bezier(.28,.98,.63,.99),opacity .8s ease-out;
+        transform: translateX(-2rem);
+        opacity: 0;
+        gap: 4.4rem;
+        row-gap: 4.1rem;
+        .more-column{
+          .more-column-nav{
+            .title{
+              font-size: 13px;
+              color: $footer-more-title-color;
+            }
+            .nav-item{
+              font-size: 13px;
+              .nav-link{
+                color: $footer-more-column-color;
+                transition: color .4s ease-in-out;
+              }
+              .nav-link:hover{
+                color: $footer-more-column-color-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-more-content.ready{
+      .more-columns{
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<section id="teasers-container" class="bg-white">
+  <div class="section-spacer h-[3.3rem] w-100"></div>
+  <!-- big-teasers -->
+  <app-teaser-card [teaser-info]="bgTeaser"></app-teaser-card>
+  <!-- big-teasers -->
+  <!-- teaser -->
+  <div class="teaser-container p-[3.4rem_7.5rem_8rem] d-flex">
+    <div class="position-relative flex-grow-1">
+      <app-teaser-card *ngFor="let teaser of teasersList" [teaser-info]="teaser"></app-teaser-card>
+    </div>
+  </div>
+  <!-- teaser -->
+</section>

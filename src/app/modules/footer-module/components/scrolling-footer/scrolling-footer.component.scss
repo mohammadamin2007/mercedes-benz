@@ -1,0 +1,99 @@
+@import "../../../../../assets/css/media-querys";
+@import "../../../../../assets/css/variables";
+#scrolling-footer{
+  background-color: $scrolling-footer-background-color;
+  height: 350vh;
+  .scroll-position-finder{
+    .vh-100{
+      div{
+        top: 15px;
+      }
+    }
+  }
+  .scroll-container-bg{
+    .menu-container{
+      column-gap: 3rem;
+      top: 40%;
+      padding-left: 7.5rem;
+      padding-right: 7.5rem;
+      .title-container{
+        .menu-item-titles{
+          cursor: pointer;
+          width: 16.9rem;
+          .menu-item-title{
+            .title{
+              cursor: pointer;
+              .words{
+                transition: transform 1s cubic-bezier(0.45, -0.01, 0, 0.88), color .4s ease-in-out;
+                margin-bottom: -0.1em;
+                margin-right: 0.2em;
+                font-size: 3.2rem;
+                color: $scrolling-footer-title-color;
+                transform: translateY(4rem);
+              }
+              .words.active{
+                color: $scrolling-footer-title-active-color !important;
+              }
+            }
+          }
+          .menu-item-title.ready{
+            .title{
+              .words{
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+        .menu-item-titles:hover{
+          .menu-item-title{
+            .title{
+              .words{
+                color: $scrolling-footer-title-active-color !important;
+              }
+            }
+          }
+        }
+      }
+      .menu-list-container{
+        .nav-menu{
+          z-index: 100;
+          top: 0;
+          transition: opacity .75s, transform .75s;
+          transition-delay: 1s;
+          transform: translateX(-75px);
+          .nav-item{
+            .nav-link{
+              white-space: nowrap;
+              font-size: 1.1rem;
+              line-height: 2.3rem;
+              color: $scrolling-footer-menu-color;
+              transition: color .4s ease-in-out;
+            }
+            .nav-link:hover{
+              color: $scrolling-footer-menu-hover !important;
+            }
+          }
+        }
+        .nav-menu.show{
+          transition: opacity .7s,transform .55s ease-in-out;
+          transform: translateY(0) translateX(0);
+          opacity: 1;
+        }
+        .nav-menu.hide-up{
+          transition: opacity .8s,transform .55s cubic-bezier(.46,0,1,.5);
+          transform: translateY(-3rem);
+          opacity: 0;
+        }
+        .nav-menu.hide-bottom{
+          transition: opacity .8s,transform .55s cubic-bezier(.46,0,1,.5);
+          transform: translateY(3rem);
+          opacity: 0;
+        }
+        .hide{
+          transform: translateX(-3rem) !important;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

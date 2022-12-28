@@ -1,0 +1,22 @@
+<section id="{{ teaserInfo.teaserID }}-teaser" appAnimation>
+  <a href="#" class="teaser-container d-grid">
+    <div class="mediator w-100 d-flex">
+      <div class="teaser-title d-flex justify-content-center flex-column">
+        <div class="teaser-name text-black" style="transition-delay: .6s"> {{ teaserInfo.teaserName }} </div>
+        <div class="main-title">
+          <div class="title d-flex flex-wrap">
+            <div class="word text-black" *ngFor="let word of teaserInfo.teaserTitleWrap; let i = index" [ngStyle]="{'transition-delay': transitionDelayWords + i * .05 + 's'}">{{ word.text }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pic-container position-relative overflow-hidden">
+      <div class="pic">
+        <img [src]="teaserInfo.teaserImg" alt="innovation-img" (mouseenter)="showBtn = true" (mouseleave)="showBtn = false" (mousemove)="moveMore(moreBtn, $event)">
+      </div>
+      <div #moreBtn class="more-btn position-absolute bg-white d-flex align-items-center justify-content-center" [ngClass]="{'d-none': !showBtn}">
+        <span class="text text-black">More</span>
+      </div>
+    </div>
+  </a>
+</section>

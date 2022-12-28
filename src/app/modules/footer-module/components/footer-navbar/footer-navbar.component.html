@@ -1,0 +1,21 @@
+<section id="navbar-footer">
+  <div class="section-divider"></div>
+  <div class="navbar-footer-container flex-md-row flex-column d-flex">
+    <div class="footer-navigation ">
+      <ul class="nav">
+        <li class="nav-item" *ngFor="let footerNavItem of footerNavList"><a href="" class="nav-link p-0">{{ footerNavItem.text }}</a></li>
+      </ul>
+    </div>
+    <ul class="nav lang-nav flex-grow-1 justify-content-center justify-content-md-end">
+      <li class="d-flex align-items-center language-switcher">
+        <div class="language deutsch">
+          <a class="text-decoration-none d-flex align-items-center" href="#">Deutsch</a>
+        </div>
+        <div class="divider align-self-center"></div>
+        <div class="language english">
+          <a class="current-lang text-decoration-none d-flex align-items-center" href="#">English</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

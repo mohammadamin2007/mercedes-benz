@@ -1,0 +1,75 @@
+@import "../../../assets/css/media-querys";
+@import "../../../assets/css/variables";
+.header-container{
+  .header-content{
+    .header-title{
+      transition: margin-top 1s cubic-bezier(.58,0,0,1);;
+      .words{
+        color: $header-text-color;
+      }
+    }
+    .header-btn{
+      .header-btn-link{
+        background-color: $header-btn-background !important;
+        color: $header-btn-color;
+        max-width: calc(100% - 4.28571rem);
+        transition: background-color .5s,color .25s;
+      }
+      .header-btn-link:hover{
+        color: $header-btn-hover-text;
+        background-color: $header-btn-hover-background!important;
+      }
+    }
+  }
+  .header-content.navbar-expanded{
+    .header-title{
+      margin-top: 7.1428571429rem;
+    }
+  }
+}
+.headers-shadow{
+  content: "";
+  background-color: black;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 0 54rem 14rem black ;
+  height: 1px;
+}
+#header{
+  .background{
+    background-image: url("../../../assets/images/header_img.jpeg");
+    background-size: cover;
+    background-position: center center;
+  }
+  @extend .header-container;
+}
+#header::after {
+  @extend .headers-shadow;
+}
+#second-header{
+  transform: translateZ(-1px);
+  .background, .background-1023, .background-767{
+    background-size: cover;
+    background-position: center center;
+  }
+  .background{
+    background-image: url("../../../assets/images/elec-benz.webp");
+  }
+  .background-1023{
+    background-image: url("../../../assets/images/elec-mercedes-1023.jpeg");
+  }
+  .background-767{
+    background-image: url("../../../assets/images/elec-mercedes-767.webp");
+  }
+  @extend .header-container;
+  .sub-description{
+    .text-container{
+      .sentences{
+        color: $header-footer-color;
+      }
+    }
+  }
+}
+#second-header::after{
+  @extend .headers-shadow;
+}

@@ -1,0 +1,13 @@
+@import "../../../../../assets/css/media-querys";
+#top-btn {
+  background-color: black;
+  a{
+    margin: 6.4rem auto 4rem;
+    span{
+      font-size: 13px; margin-bottom: -3px
+    }
+    svg{
+      height: 1.8rem;margin-bottom: -0.4285714286rem;transform: rotate(-90deg); width: 1.8rem;
+    }
+  }
+}

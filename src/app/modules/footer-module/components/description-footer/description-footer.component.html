@@ -1,0 +1,23 @@
+<section id="description-footer" class="overflow-hidden">
+  <div class="des-footer-container pl-[7.5rem] pr-[7.5rem] pb-[4rem] d-flex flex-column">
+    <div class="section-divider pb-[4rem]"></div>
+    <p class="legend-container d-flex">
+      <span class="legend-item text-[13px] mr-[1.9rem] d-flex align-items-center">
+        <svg viewBox="0 0 58 70" xmlns="http://www.w3.org/2000/svg" class="h-[1rem] mb-[1px] mr-[.6rem] w-[1rem]" width="2.857142857142857rem" height="2.857142857142857rem"><path d="M57.62 23.59v-7.73H44.31V4a4 4 0 00-4-4h-1.39a4 4 0 00-4 4v11.9H23V4a4 4 0 00-4-4h-1.35a4 4 0 00-4 4v11.9H.38v7.73h4.38v.95a66.44 66.44 0 00.31 8.6A24.14 24.14 0 0026 53.45V70h7V53.34l.7-.11A24 24 0 0053 32.5a88.13 88.13 0 00.22-8.91h4.4zM25.38 44.38H24l3.58-9.21h-3.64l8.68-10.83H34l-3.58 9.21h3.67l-8.71 10.83z" fill="currentColor"></path></svg>
+         Stromverbrauch kombiniert²
+      </span>
+      <span class="legend-item text-[13px] mr-[1.5rem] d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-[1rem] mb-[1px] mr-[.6rem] w-[1rem]" viewBox="0 0 67.169 69.731" width="2.857142857142857rem" height="2.857142857142857rem"><path d="M57.367 59.706c-5.792 0-10.137-4.901-10.137-11.919 0-2.228.78-5.458 1.671-8.243.78-2.562 1.559-5.235 1.559-7.018 0-4.122-2.228-6.238-6.684-6.238l-1.448.111v37.094h3.899v6.238H0v-6.238h3.899V0h38.43v21.499c9.803 0 13.144 4.456 13.144 11.251-.111 1.337-.668 3.787-1.671 7.352-1.114 3.676-1.671 6.238-1.671 7.797 0 4.122 2.228 7.018 4.79 7.018 3.23 0 5.347-4.344 5.347-10.916v-20.72l-3.676-3.787v-8.132L52.02 4.121 56.03.445l11.139 12.253v31.301c0 6.349-1.114 10.471-3.342 12.587-2.115 2.118-4.343 3.12-6.46 3.12zM33.975 24.395V8.466H12.476v15.929h21.499zm-5.793 18.937c0-2.116-4.344-9.691-4.901-9.691L20.83 37.54c-1.671 2.785-2.451 4.79-2.451 5.792 0 2.785 2.116 5.013 4.901 5.013 2.675-.001 4.902-2.228 4.902-5.013z" fill="currentColor"></path></svg>
+        Kraftstoffverbrauch kombiniert¹ ²
+      </span>
+      <span class="legend-item text-[13px] mr-[1.9rem] d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-[1rem] mb-[1px] mr-[.6rem] w-[1rem]" viewBox="0 0 71.625 66.615" width="2.857142857142857rem" height="2.857142857142857rem"><path d="M22.613 56.254c5.681 0 11.696-1.337 17.823-4.01 6.238-2.673 11.808-5.904 16.597-9.803 4.79-3.899 8.132-7.463 9.914-10.694.111 1.671.223 3.008.223 4.01.111 12.699-8.911 31.078-36.537 30.856-8.354-.446-15.818-2.005-22.613-4.79-3.008-1.225-5.681-2.562-8.02-4.01 3.008-5.458 6.238-10.471 9.691-14.815 8.132-10.582 16.597-17.377 25.286-20.608 5.235-1.894 10.137-2.896 14.704-2.896 3.676 0 7.018.557 10.025 1.782C63.159 16.709 65.721 9.58 67.503 0l4.122 1.003c-.334 4.01-.78 7.463-1.559 10.248-.668 2.785-2.005 6.906-4.122 12.476-1.671 4.567-5.347 9.134-10.805 13.924S43.443 46.34 36.536 49.459c-6.795 3.119-12.922 4.678-18.38 4.678l1.225 1.894c1.338.112 2.452.223 3.232.223z" fill="currentColor"></path></svg>
+         CO₂-Emissionen kombiniert¹
+      </span>
+    </p>
+    <p class="description-item mt-[.9rem_!important] text-[13.5px] leading-[1.5] d-flex" *ngFor="let desItem of desItemList; let i = index">
+      <span class="number pr-[1.1rem]" [ngClass]="{'margin-top': i <= 1}">{{ i + 1 }}</span>
+      <span class="text">{{ desItem.text }}</span>
+    </p>
+  </div>
+</section>

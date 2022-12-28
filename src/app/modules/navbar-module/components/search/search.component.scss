@@ -1,0 +1,90 @@
+@import "../../../../../assets/css/media-querys";
+@import "../../../../../assets/css/variables";
+#search{
+  z-index: 100000;
+  padding-top: 4.5rem;
+  .form-container{
+    height: 0;
+    transition: height .00005s;
+    .tr-form-container{
+      padding: 1.55rem 7.4rem 0;
+      .search-form{
+        align-items: center;
+        grid-template-areas:
+        "icon-left input icon-right";
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+        max-width: 35rem;
+        .search-go-icon, .search-icon{
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+        .search-icon{
+          z-index: 2;
+          grid-area: icon-left;
+          margin-left: 1rem;
+          color: #767676;
+          margin-bottom: .1rem;
+        }
+        .search-input{
+          grid-column-end: icon-right;
+          grid-column-start: icon-left;
+          grid-row-end: icon-right;
+          border-bottom: 2px solid #767676;
+          input{
+            background-color: transparent;
+            border: none;
+            color: $search-text-color;
+            font-size: 16.2px;
+            padding: 1.1rem 3rem 0.9rem 3rem;
+            width: 100%;
+          }
+          input:focus{
+            outline:3px solid $search-focus-color;
+            outline-offset: .7rem;
+          }
+          input:focus::placeholder{
+            opacity: 0;
+          }
+          input::placeholder{
+            color: $search-placeholder-color;
+          }
+        }
+        .search-go-icon{
+          grid-area: icon-right;
+          margin-right: 1.2rem;
+          color: $search-icon-color;
+          margin-bottom: .2rem;
+        }
+      }
+    }
+  }
+  .close-btn-container{
+    z-index: 2000;
+    height: 4.4rem;
+    margin-right: 1.5rem;
+    .close-btn {
+      color: #9f9f9f;
+      transition: color 0.25s, transform .75s;
+      font-size: 0.75rem;
+      padding-right: 0.3rem;
+      padding-top: 0.2rem;
+      transform: translateY(7rem);
+      .icon{
+        svg{
+          height: .95rem;
+          position: relative;
+          width: .95rem;
+        }
+      }
+    }
+    .close-btn.ready{
+      transform: translateY(0rem);
+    }
+  }
+}
+#search{
+  .form-container.h-100{
+    transition: height .5s;
+  }
+}

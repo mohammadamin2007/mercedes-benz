@@ -1,0 +1,32 @@
+<div class="divider"></div>
+<div class="login">
+  <a class="curs-pointer login-link d-flex justify-content-center" (click)="collapse.toggle()">
+      <span class="text">
+        Login
+      </span>
+    <svg xmlns="http://www.w3.org/2000/svg" [ngClass]="{'open' : !loginCollapse}" viewBox="0 0 24 24" class="login-icon"><path d="M9.121 19.728l-.707-.707 7.07-7.071-7.07-7.071.707-.707 7.07 7.07h.001l.707.708-7.778 7.778z" fill="currentColor" fill-rule="evenodd"></path></svg>
+  </a>
+  <div  class="login-collapse" #collapse="ngbCollapse" [(ngbCollapse)]="loginCollapse">
+    <div class="collapse-link-container" *ngFor="let item of collapseItemList">
+      <a href="#" class="collapse-link d-flex justify-content-center align-items-center">
+        <span class="text">{{ item.text }}</span>
+        <span class="link-icon d-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="100%" height="100%"><path d="M4 11.036L10.034 5 5.743 5V4h6v6h-1l-.001-4.291-6.035 6.034L4 11.036z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<ul class="nav lang-nav flex-grow-1 justify-content-center">
+  <li class="d-flex align-items-center language-switcher">
+    <div class="language deutsch">
+      <a class="text-decoration-none d-flex align-items-center" href="#">Deutsch</a>
+    </div>
+    <div class="divider align-self-center"></div>
+    <div class="language english">
+      <a class="current-lang text-decoration-none d-flex align-items-center" href="#">English</a>
+    </div>
+  </li>
+</ul>
+<div class="privacy-btn d-flex justify-content-center" (click)="openModule()">
+  <a class="curs-pointer">Privacy notice</a>
+</div>

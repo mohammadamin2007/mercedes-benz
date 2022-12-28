@@ -1,0 +1,50 @@
+@import "../../../assets/css/media-querys";
+@import "../../../assets/css/variables";
+#fifty-year{
+  grid-template: "text media" auto/7fr 5fr;
+  .text-container{
+    .sec-name{
+      transition: transform .4s ease-out,opacity .8s ease-out;
+      color: $fifty-year-text-color;
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    .sec-name.ready{
+      opacity: 1 !important;
+      transform: translateY(0rem);
+    }
+    .main-title{
+      .title{
+        .word{
+          transition: transform 1s cubic-bezier(0,1,.45,1),opacity 1s;
+          color: $fifty-year-text-color;
+          opacity: 0;
+          transform: translateY(2rem);
+        }
+      }
+    }
+    .main-title.ready{
+      .title{
+        .word{
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+      }
+    }
+    .description-container{
+      .des-btn-container {
+        .des-btn-link {
+          background-color: $fifty-year-btn-background !important;
+          color: $fifty-year-btn-color;
+          max-width: calc(100% - 4.28571rem);
+          transition: background-color .5s, color .25s;
+        }
+
+        .des-btn-link:hover {
+          color: $fifty-year-btn-hover-text;
+          background-color: $fifty-year-btn-hover-background !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../../../../assets/css/media-querys";
+@import "../../../../../assets/css/variables";
+#description-footer{
+  background-color: $footer-description-background;
+  .des-footer-container{
+    .section-divider{
+      border-top: 1px solid $spacer-color;
+    }
+    .legend-container{
+      .legend-item{
+        color: $footer-description-legend-color;
+      }
+    }
+    .description-item{
+      color: $footer-description-text-color;
+      .number.margin-top{
+        margin-top: -.25rem;
+      }
+    }
+  }
+}

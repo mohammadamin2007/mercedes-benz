@@ -1,0 +1,21 @@
+<section id="search" class="w-100 overflow-hidden position-fixed top-0" [ngClass]="{'h-100': vlService.searchFormH, 'd-none': !vlService.searchDisplay, 'd-flex': vlService.searchDisplay}">
+  <div class="form-container w-100" [ngClass]="{'h-100': vlService.searchFormH}">
+    <div class="tr-form-container  d-flex justify-content-center w-100">
+      <form action="#" class="search-form d-grid w-100" [formGroup]="searchForm">
+        <a class="search-icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g transform="translate(2 2)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" cx="7.121" cy="4.5" r="4.5"></circle><path fill="currentColor" d="M0 10.914L3.535 7.38l.707.707-3.535 3.536z"></path></g></svg></a>
+        <div class="search-input">
+          <input type="text" #formInput placeholder="Search mercedes-benz.com" formControlName="searchItem">
+        </div>
+        <a class="search-go-icon curs-pointer"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.121 19.728l-.707-.707 7.07-7.071-7.07-7.071.707-.707 7.07 7.07h.001l.707.708-7.778 7.778z" fill="currentColor" fill-rule="evenodd"></path></svg></a>
+      </form>
+    </div>
+  </div>
+  <div class="close-btn-container position-absolute top-0 d-flex align-items-center end-0 overflow-hidden">
+    <a class="close-btn curs-pointer d-flex" [ngClass]="{'ready': vlService.searchCloseBtn}" (click)="vlService.closeSearch()">
+      <span class="text">Close Search</span>
+      <span class="icon">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M12.581 4.096l-3.89 3.889 3.89 3.89-.707.706-3.89-3.89-3.888 3.89-.707-.707 3.888-3.89L3.39 4.097l.707-.707 3.889 3.888 3.89-3.888.706.707z" fill="currentColor" fill-rule="evenodd"></path></svg>
+      </span>
+    </a>
+  </div>
+</section>

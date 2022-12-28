@@ -1,0 +1,76 @@
+.ng-no-navigation::after{
+  display: none !important;
+}
+.curs-pointer{
+  cursor: pointer;
+}
+.modal{
+  z-index: 200000;
+}
+.modal-dialog{
+  max-width: 90%;
+  width: 892px;
+  margin-top: 1.55rem;
+  .modal-content{
+    border-radius: 0;
+    .modal-header{
+      border-bottom: 0;
+      .close-btn{
+        top: 1.3rem;
+        right: 1.6rem;
+        svg{
+          width: .85rem;
+        }
+      }
+    }
+    .modal-body{
+      margin-top: 14px;
+      padding-left: 40px;
+      padding-right: 40px;
+      .navigation-bar{
+        .nav{
+          margin-bottom: 2.27rem;
+          .nav-item{
+            .tab-link{
+              color: $pri-tab-color;
+              font-size: 13px;
+              margin: 0 1px -1px 1px;
+              padding: 11px 20px;
+              border: 1px solid white;
+              border-bottom: none;
+            }
+            .tab-link.active{
+              color: $pri-tab-active-color !important;
+              border: 1px solid $pri-tab-border-active-color;
+              border-bottom: 1px solid white;
+            }
+            .tab-link:hover{
+              color: unset;
+            }
+          }
+        }
+      }
+      .pages-container{
+        .title{
+          font-size: 1.15rem;
+          margin-bottom: .6rem !important;
+        }
+        p{
+          color: $pri-text-color;
+          margin-top: 0 !important;
+          font-size: 13px;
+          a{
+            color: $pri-link-color;
+          }
+          a:hover{
+            text-decoration: underline;
+            color: $pri-link-hover-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+.z-in-1000{
+  z-index: 1000 !important;
+}

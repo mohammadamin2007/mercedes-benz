@@ -1,0 +1,80 @@
+@import "../../../../../assets/css/variables";
+@import "../../../../../assets/css/media-querys";
+.lang-nav{
+  padding-top: 1.5rem;
+  padding-bottom: 1.6rem;
+  .language-switcher{
+    .divider{
+      background: $full-screen-divider-language;
+      content: "";
+      display: inline-block;
+      height: 0.7857142857rem;
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+      width: 1px;
+    }
+    a{
+      color: $full-screen-language-color !important;
+      font-size: 13.5px;
+      transition: color 0.25s;
+    }
+    a.current-lang{
+      color: $full-screen-language-hover-color !important;
+    }
+    a:hover{
+      color: $full-screen-language-hover-color !important;
+    }
+  }
+}
+.privacy-btn{
+  margin-bottom: 6.2rem;
+  a{
+    color: $full-screen-privacy-btn-color !important;
+    font-size: 13.5px;
+  }
+}
+.divider{
+  background: $full-screen-divider;
+  height: 0.0714285714rem;
+}
+.login{
+  padding-top: 1.255rem;
+  padding-bottom: 1.255rem;
+  .login-link{
+    .text{
+      font-size: .8rem;
+      color: $full-screen-text-color;
+    }
+    .login-icon{
+      height: 1.1428571429rem;
+      margin-left: 0.2142857143rem;
+      transform: rotate(90deg);
+      width: 1.1428571429rem;
+      color: $full-screen-text-color;
+      align-self: center;
+    }
+    .login-icon.open {
+      transform: rotate(-90deg) !important;
+    }
+  }
+  .login-collapse{
+    margin-top: 2.2rem;
+    .collapse-link-container{
+      .collapse-link{
+        color: $full-screen-text-color;
+        padding: 1.1rem 1.05rem 1.15rem 1.5rem;
+        .text{
+          font-size: 13px;
+        }
+        .link-icon{
+          height: 1.1428571429rem;
+          width: 1.1428571429rem;
+        }
+      }
+      .collapse-link:hover{
+        color: $full-screen-text-color !important;
+        background-color: #4eaffd !important;
+      }
+    }
+  }
+}

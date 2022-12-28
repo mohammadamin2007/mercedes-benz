@@ -1,0 +1,20 @@
+<section id="footer-more">
+  <div class="footer-more-container pl-[7.5rem] pr-[7.5rem]">
+    <div class="section-divider"></div>
+    <div class="footer-more-content pt-[12rem] pb-[12rem] flex-column flex-md-row d-flex back" appAnimation>
+      <div class="more-title leading-[4.2857142857rem] min-w-[16.9rem] back" appAnimation>
+        <div class="title d-flex justify-content-start overflow-hidden mt-[-1rem]">
+          <div class="words mb-[-0.1em] mr-[.2em] text-[2.5rem]">More</div>
+        </div>
+      </div>
+      <div class="more-columns flex-wrap d-flex">
+        <div class="more-column leading-[1.39rem]" *ngFor="let column of moreColumnList">
+          <ul class="more-column-nav">
+            <li class="title text-[13px]">{{ column.title }}</li>
+            <li class="nav-item" *ngFor="let columnItem of column.list"><a href="#" class="nav-link">{{ columnItem.text }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
